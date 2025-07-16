@@ -36,36 +36,36 @@ async function fetchData() {
             renderPokemonCard(pokemonUrl);
         }
     }
-   catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    
-
+    catch (error) {
+        console.error("Error fetching data:", error);
     }
+
+
+}
 
 function sCategory() {
-        const inputEl = document.getElementById('category');
-        inputEl.id = 'category';
-        const value = inputEl.value;
-        console.log(value);
+    const inputEl = document.getElementById('category');
+    inputEl.id = 'category';
+    const value = inputEl.value;
+    console.log(value);
 
 
-    }
+}
 
-    function renderPokemonCard(url) {
+function renderPokemonCard(url) {
 
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                const name = data.name;
-                const imgUrl = data.sprites.front_default;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            const name = data.name;
+            const imgUrl = data.sprites.front_default;
 
-                const card = document.createElement("div");
-                card.innerHTML = `<img src="${imgUrl}" /><h3>${name}</h3>`;
+            const card = document.createElement("div");
+            card.innerHTML = `<img src="${imgUrl}" /><h3>${name}</h3>`;
 
-                document.getElementById("cards").appendChild(card);
-            })
-            .catch(err => console.error("Error:", err));
-    }
+            document.getElementById("cards").appendChild(card);
+        })
+        .catch(err => console.error("Error:", err));
+}
 
 

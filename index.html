@@ -15,12 +15,27 @@
 
         input,
         button {
-            margin: 10px;
-            padding: 8px 12px;
+
+            padding: 10px 15px;
             font-size: 16px;
-            border-radius: 6px;
             border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #333;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
         }
+
+        input:hover,
+        button:hover {
+
+            transform: scale(1.03);
+            border-color: #888;
+        }
+
+
 
         #cards {
             display: grid;
@@ -69,14 +84,56 @@
             background-color: #04AA6D;
             box-shadow: 2px 5px 5px rgb(169, 163, 163);
             cursor: pointer;
+        }
 
+        button:hover {
+            transform: scale(1.05);
+            transition: transform 0.2s ease-in-out;
+        }
 
+        select {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: #333;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        select:hover {
+            transform: scale(1.03);
+            border-color: #888;
         }
     </style>
 </head>
 
 <body>
-    <input type="text" placeholder="category" id='category'></input>
+    <select id="category">
+        <option value="">-- Select Category --</option>
+        <option value="normal">Normal</option>
+        <option value="fire">Fire</option>
+        <option value="water">Water</option>
+        <option value="grass">Grass</option>
+        <option value="electric">Electric</option>
+        <option value="ice">Ice</option>
+        <option value="fighting">Fighting</option>
+        <option value="poison">Poison</option>
+        <option value="ground">Ground</option>
+        <option value="flying">Flying</option>
+        <option value="psychic">Psychic</option>
+        <option value="bug">Bug</option>
+        <option value="rock">Rock</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
+        <option value="dark">Dark</option>
+        <option value="steel">Steel</option>
+        <option value="fairy">Fairy</option>
+    </select>
+
     <input type="number" placeholder="no. of pokemons" id='count'></input>
     <button onclick="fetchData()">Show Pokemon</button>
 
