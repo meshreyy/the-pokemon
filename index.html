@@ -15,7 +15,9 @@
 
         input,
         button {
-
+            background-color: #ffffff;
+            /* clean white */
+            color: #333;
             padding: 10px 15px;
             font-size: 16px;
             border: 1px solid #ccc;
@@ -34,6 +36,16 @@
             transform: scale(1.03);
             border-color: #888;
         }
+
+        input:hover,
+        select:hover,
+        input:focus,
+        select:focus {
+            box-shadow: 0 0 8px #30c95d;
+            /* Green glow */
+            transform: scale(1.03);
+        }
+
 
 
 
@@ -81,6 +93,7 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
+
         }
 
         button {
@@ -99,9 +112,16 @@
         }
 
         button:hover {
+            background-color: #28a94f;
             transform: scale(1.05);
             transition: transform 0.2s ease-in-out;
         }
+
+        button:active {
+            transform: scale(0.97);
+            box-shadow: none;
+        }
+
 
         select {
             padding: 10px 15px;
